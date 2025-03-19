@@ -16,6 +16,8 @@
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
+
+
 /* Barra de rolagem */
 ::-webkit-scrollbar {
   width: 6px;
@@ -120,6 +122,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+
 
 /* Pulsating Play Button
 ------------------------------*/
@@ -256,8 +259,7 @@ h6 {
 # Global Header/Cabeçalho Global
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--accent-color);
+  background-color: #592b02;
   transition: all 0.5s;
   z-index: 997;
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -282,7 +284,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  width: 100px;    /* Defina o novo tamanho desejado para a logo */
+  height: auto;
   margin-right: 8px;
 }
 
@@ -295,10 +298,12 @@ h6 {
 
 .header .cta-btn,
 .header .cta-btn:focus {
-  color: var(--contrast-color);
-  background: var(--background-btn-color);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  background: #baa67a;
+  color:#592b02;
+  font-weight: 700; 
   font-size: 14px;
-  padding: 8px 20px;
+  padding: 8px 40px;
   margin: 0 5px 0 30px;
   border-radius: 4px;
   transition: 0.3s;
@@ -309,6 +314,8 @@ h6 {
   color: var(--background-txt-color);
   background: color-mix(in srgb, var(--background-houver-btn-color), transparent 15%);
 }
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu/Menu de Navegção
@@ -333,7 +340,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: #baa67a;
     padding: 18px 15px;
     font-size: 13px;
     font-family: var(--nav-font);
@@ -361,7 +368,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #89683e;
   }
 
   .navmenu .dropdown ul {
@@ -584,7 +591,6 @@ h6 {
 }
 
 
-
 /*--------------------------------------------------------------
 # Números que fazem diferença 
 --------------------------------------------------------------*/
@@ -594,20 +600,31 @@ h6 {
   padding: 15px;
   justify-content: center;
   text-align: center;
-
-  
   position: relative;
-  z-index: 2; /* Garante que o container esteja na frente */
+  z-index: 2;
+  /* Garante que o container esteja na frente */
   margin-bottom: 20px;
   margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .cards {
+  width: 400px;
+  /* Ajuste conforme necessário */
+  height: 350px;
+  background-image: url('../img/cards/circulo.svg');
+  /* Caminho do SVG */
+  background-size: 130%;
+  /* Garante que o SVG se ajuste ao tamanho */
+  background-repeat: no-repeat;
+  background-position: 90% 300%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  display: inline-block;
-  z-index: 1; /* Mantém o card atrás do texto */
+  z-index: 1;
 }
-
 
 .ellipse {
   width: 60px;
@@ -619,10 +636,12 @@ h6 {
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
-  top: -20px; /* Ajuste fino para melhor posicionamento */
-  left: 50%;
-  transform: translateX(-50%); 
-  z-index: 3; /* Garante que o círculo fique na frente */
+  top: -30px;
+  /* Ajuste fino para melhor posicionamento */
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 3;
+  /* Garante que o círculo fique na frente */
 }
 
 .icon {
@@ -630,10 +649,10 @@ h6 {
   color: #D0BA8E;
 }
 
-#heartbeat{
+#heartbeat {
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-        animation: heartbeat 1.5s ease-in-out infinite both;
- 
+  animation: heartbeat 1.5s ease-in-out infinite both;
+
 
 
 }
@@ -641,91 +660,119 @@ h6 {
 @-webkit-keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
+
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
+
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
+
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
+
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
+
 @keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
+
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
+
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
+
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
+
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 
 
 .info {
-  margin-top: -65%; 
-  position: relative;
-  z-index: 4; /* Garante que o texto fique sempre na frente */
+  margin-top: -30% !important;
+  position: absolute;
+  left: 35px;
+  z-index: 4;
+  /* Garante que o texto fique sempre na frente */
   padding: 5px;
 }
 
-.featured-services{
+.info p {
+  font-size: 90em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Raleway;
+  margin-top: 30px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  /* 150% */
+}
+
+.featured-services {
   padding-top: 20px;
   padding-bottom: 80px;
 }
 
-.featured-services h3{
+.featured-services h2 {
   margin-top: 10px;
   font-size: 50px;
 }
 
-.featured-services h3::after{
+.featured-services h3 {
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+.featured-services h3::after {
   content: "";
   background: var(--accent-color);
   position: absolute;
@@ -778,7 +825,6 @@ h6 {
 
 .featured-services .service-item p {
   line-height: 24px;
-  font-size: 14px;
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
 }
@@ -799,17 +845,20 @@ h6 {
   .container-numeros {
     margin-bottom: 50px;
   }
-  
- .info h2{
-  font-size: 60px;
- }
 
- .info p{
-  font-size: 20px;
- }
-
-  
+  .info h2 {
+    font-size: 60px;
   }
+
+  .info p {
+    font-size: 20px;
+  }
+
+
+}
+
+
+
 
   /*--------------------------------------------------------------
 # Doação Section
@@ -1475,16 +1524,18 @@ Section hero
 }
 
 .hero .btn-get-started {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 800;
   font-size: 24px;
-  padding: 10px 20px;
-  background-color: #c19a6b;
-  color: white;
+  padding: 10px 80px;
+  background-color: #d0b687;
+  color: #654720;
   border-radius: 5px;
   text-decoration: none;
 }
 
 .hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+  background: color-mix(in srgb, var(--background-houver-btn-color), transparent 15%);
 }
 
 @media (max-width: 1100px) {
@@ -1511,7 +1562,6 @@ Section hero
   .hero .btn-get-started {
     font-size: 18px;
     padding: 10px 20px;
-   
   }
 
 }
@@ -1938,21 +1988,28 @@ Section hero
 }
 
 
-
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+.testimonial-item{
+  background-image: url('../img/cards/circulo.svg');
+  background-size: 170% !important;
+}
+
 .testimonials .testimonial-item {
-  height: 400px;
+  height: 450px;
   position: relative;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center;
+  /* Centraliza verticalmente */
+  align-items: center;
+  /* Centraliza horizontalmente */
   text-align: center;
-  padding: 10px; /* Reduzi para manter margem interna sem deslocar o conteúdo */
+  padding: 10px;
+  /* Reduzi para manter margem interna sem deslocar o conteúdo */
 }
 
 .testimonials .testimonial-item p {
@@ -1961,35 +2018,43 @@ Section hero
   color: var(--background-color);
   position: relative;
   z-index: 2;
-  padding: 20px;
-  max-width: 80%; /* Garante que o texto não fique muito largo */
+  padding: 30px;
+  max-width: 80%;
+  /* Garante que o texto não fique muito largo */
 }
 
 .texto {
   display: flex;
-  flex-direction: column; /* Organiza os itens verticalmente */
-  align-items: center; /* Centraliza os elementos */
+  flex-direction: column;
+  /* Organiza os itens verticalmente */
+  align-items: center;
+  /* Centraliza os elementos */
   justify-content: center;
-  width: 80%; /* Limita a largura do container */
+  width: 80%;
+  /* Limita a largura do container */
   text-align: center;
-  position: relative; /* Permite posicionamento absoluto dentro do container */
+  position: relative;
+  /* Permite posicionamento absoluto dentro do container */
   padding: 20px;
 }
 
 .texto i {
-  font-size: 20px; 
-  color: var(--accent-color); /* Cor dos ícones */
+  font-size: 20px;
+  color: var(--accent-color);
+  /* Cor dos ícones */
   position: absolute;
 }
 
 .quote-icon-left {
-  top: 0;
-  left: -1px; /* Mantém dentro do card */
+  top: 50px;
+  left: -1px;
+  /* Mantém dentro do card */
 }
 
 .quote-icon-right {
   bottom: 0;
-  right: 25px; /* Mantém dentro do card */
+  right: 10px;
+  /* Mantém dentro do card */
 }
 
 .testimonials .testimonial-item::before {
@@ -2001,6 +2066,7 @@ Section hero
 .testimonials .testimonial-item span {
   display: block;
   text-align: center;
+  margin-top: 50px;
   font-size: 20px;
   font-weight: 400;
   color: var(--default-color);
@@ -2008,17 +2074,19 @@ Section hero
 
 .testimonials h3,
 .testimonials h4 {
-  text-align: center; 
-  width: 100%; /* Garante que ocupem toda a largura disponível */
+  text-align: center;
+  width: 100%;
+  /* Garante que ocupem toda a largura disponível */
 }
 
 .testimonials h3 {
-  font-size: 35px; 
+  font-size: 35px;
 }
 
 .testimonials h4 {
-  font-size: 25px; 
-  font-weight: normal; /* Deixa o subtítulo menos destacado */
+  font-size: 25px;
+  font-weight: normal;
+  /* Deixa o subtítulo menos destacado */
   color: var(--contrast-color);
 }
 
@@ -2032,27 +2100,36 @@ Section hero
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
-  top: 80%; /* Coloca a imagem no meio do slide */
-  left: 10%;  /* Ajusta a distância da borda esquerda */
-  transform: translateY(-50%); /* Centraliza verticalmente */
-  z-index: 2; /* Garante que fique à frente do conteúdo do slide */
+  top: 90%;
+  /* Coloca a imagem no meio do slide */
+  left: 10%;
+  /* Ajusta a distância da borda esquerda */
+  transform: translateY(-50%);
+  /* Centraliza verticalmente */
+  z-index: 2;
+  /* Garante que fique à frente do conteúdo do slide */
 }
 
 
 .testimonials .perfil-depoimentos {
-  z-index: 3; /* Garante que o perfil de usúario fique na frente */
+  z-index: 3;
+  /* Garante que o perfil de usúario fique na frente */
 }
 
 .swiper-slide {
-  max-width: 420px; /* Limita a largura do slide */
-  max-height: 420px; /* Limita a altura do slide */
+  max-width: 420px;
+  /* Limita a largura do slide */
+  max-height: 420px;
+  /* Limita a altura do slide */
   position: relative;
-  overflow: visible; /* Garantir que o conteúdo não seja cortado */
+  overflow: visible;
+  /* Garantir que o conteúdo não seja cortado */
 }
 
 .swiper-wrapper {
   position: relative;
-  z-index: 1; /* Garantir que o conteúdo do Swiper tenha a ordem correta */
+  z-index: 1;
+  /* Garantir que o conteúdo do Swiper tenha a ordem correta */
 }
 
 
@@ -2063,7 +2140,8 @@ Section hero
 .testimonials .swiper-pagination {
   margin-top: 70px;
   position: relative;
-  z-index: 3; /* Garante que a navegação fique na frente */
+  z-index: 3;
+  /* Garante que a navegação fique na frente */
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet {
@@ -2089,18 +2167,24 @@ Section hero
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
     text-align: center;
-    padding: 10px; /* Reduzi para manter margem interna sem deslocar o conteúdo */
+    padding: 10px;
+    /* Reduzi para manter margem interna sem deslocar o conteúdo */
   }
+
   .testimonials .perfil-depoimentos {
     width: 70px;
     height: 70px;
     background-color: #db2121;
-    top: 70%; /* Coloca a imagem no meio do slide */
-    left: 10%;  /* Ajusta a distância da borda esquerda */
-   
+    top: 70%;
+    /* Coloca a imagem no meio do slide */
+    left: 10%;
+    /* Ajusta a distância da borda esquerda */
+
   }
 
 }
