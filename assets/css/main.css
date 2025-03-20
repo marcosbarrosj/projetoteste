@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;1,300;1,900&display=swap');
 
 
 /* Fonts */
@@ -32,8 +32,8 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* bagroun do centro */
-  --default-color: #5F2F01; /* letra menores do centro */
-  --heading-color: #5B3101; /* letra maior do centro */
+  --default-color: #5B3101; /* letra menores do centro */
+  --heading-color: #7d4606; /* letra maior do centro */
   --accent-color: #813e03; /* sao os icnos o header as transiçoes */
   --surface-color: #ffffff; /* background interno da div. */
   --contrast-color: #ffffff; /*  botao texto */
@@ -289,10 +289,7 @@ h6 {
 
 .header .cta-btn,
 .header .cta-btn:focus {
-  font-family: 'Alegreya Sans SC', sans-serif;
-  color:#592b02;
-  font-weight: 700; 
-  font-size: 14px;
+  font-size: 16px; 
   background: #baa67a;
   padding: 8px 40px;
   margin: 0 5px 0 30px;
@@ -1089,11 +1086,27 @@ h6 {
   position: relative;
 }
 
+.footer-logo {
+  max-width: 100px; 
+  height: auto;
+  width: 250px;
+}
+
+.footer .rn-logo{
+  max-width: 150px;
+  width: auto;
+}
+
 .footer .footer-top {
   padding-top: 50px;
 }
 
 .footer .footer-about .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
   line-height: 1;
   margin-bottom: 25px;
 }
@@ -1104,8 +1117,11 @@ h6 {
 }
 
 .footer .footer-about .logo span {
+  display: block;
+  width: 100%;
+  text-align: center;
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -1113,21 +1129,12 @@ h6 {
 
 .footer .footer-about p {
   font-size: 14px;
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
 }
 
-.footer .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-right: 10px;
-  transition: 0.3s;
+.footer .footer-about i {
+  font-size: 20px;
+  margin-left: 5px;
 }
 
 .footer .social-links a:hover {
@@ -1195,6 +1202,19 @@ h6 {
   margin-top: 8px;
   font-size: 13px;
 }
+
+@media (max-width: 768px) {
+  .footer-logo {
+    max-width: 80px; /* Reduz tamanho em telas menores */
+    margin: 20px;
+  }
+
+  .footer .rn-logo {
+    max-width: 120px; /* Ajuste para telas menores */
+  }
+
+}
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1526,39 +1546,69 @@ Section hero
   border-radius: 42% 49% 42% 50% / 51% 44% 56% 49%;
   box-shadow: 10px 4px 10px 15px rgba(0, 0, 0, 0.10); /* Dá um destaque à imagem */
 }
+#section-video-texto{
+}
+#section-video-texto .texto-1{
+  margin-top: 20px;
+  width: 85%;
+}
+
+#section-video-texto .texto-1 p{
+font-size: var(--default-font);
+/* font-weight: bold; */
+
+}
+
+#section-video-texto .texto-2 ul{
+list-style: none;
+padding: 0;   
+
+}
+#section-video-texto .texto-2 ul li{
+padding: 10px 0 0 0;
+display: flex;
+}
+#section-video-texto .texto-2 ul li span{
+font-weight: bold;
+
+  }
   
 
-.about .content h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-.about .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about .content ul li {
-  padding: 10px 0 0 0;
-  display: flex;
-}
-
 .about .content ul i {
-  color: var(--accent-color);
-  margin-right: 0.5rem;
-  line-height: 1.2;
-  font-size: 1.25rem;
+color: var(--accent-color);
+margin-right: 0.5rem;
+line-height: 1.2;
+font-size: 1.25rem;
+font-weight: bold;
+
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
+
+#section-video-texto .btn{
+  text-decoration: none;
+  font-size: 16px; 
+  background: #baa67a;
+  padding: 8px 40px;
+  border-radius: 4px;
+  transition: 0.3s;
+  margin-top: 8%;
+  margin-left: 30%;
+  font-weight: 700; 
+
+
 }
 
-.about .pulsating-play-btn {
-  position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
+#section-video-texto .btn:hover{
+  border: 1px solid var(--accent-color);
+  color: var(--background-txt-color);
+  background: color-mix(in srgb, var(--background-houver-btn-color), transparent 15%);
+
 }
+
+
+
+
+
 
 
 @media (max-width: 992px) {
