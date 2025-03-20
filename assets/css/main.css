@@ -1,18 +1,9 @@
-/**
-* Template Name: Medicio
-* Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
+
+
 /* Fonts */
 :root {
-  --default-font: "Lora", serif, auto, 300 , normal
+  --default-font: "Poppins", "sans-serif";
   --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
@@ -120,7 +111,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: var(--default-font);
 }
 
 
@@ -299,10 +290,10 @@ h6 {
 .header .cta-btn,
 .header .cta-btn:focus {
   font-family: 'Alegreya Sans SC', sans-serif;
-  background: #baa67a;
   color:#592b02;
   font-weight: 700; 
   font-size: 14px;
+  background: #baa67a;
   padding: 8px 40px;
   margin: 0 5px 0 30px;
   border-radius: 4px;
@@ -595,57 +586,53 @@ h6 {
 # Números que fazem diferença 
 --------------------------------------------------------------*/
 .container-numeros {
-  display: grid;
-  gap: 35px;
-  padding: 15px;
+  display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  padding: 15px;
   position: relative;
   z-index: 2;
-  /* Garante que o container esteja na frente */
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+  width: 100%;
+ 
+ 
 }
 
 .cards {
   width: 400px;
-  /* Ajuste conforme necessário */
   height: 350px;
   background-image: url('../img/cards/circulo.svg');
-  /* Caminho do SVG */
-  background-size: 130%;
-  /* Garante que o SVG se ajuste ao tamanho */
-  background-repeat: no-repeat;
-  background-position: 90% 300%;
+  background-size: 170%; /* Ajusta o tamanho do SVG dentro do elemento */
+  background-repeat: no-repeat; /* Evita repetição */
+  background-position: center; /* Centraliza a imagem */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   z-index: 1;
 }
 
+
+
+
 .ellipse {
-  width: 60px;
-  height: 60px;
-  background-color: #fff;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
   position: absolute;
-  top: -30px;
-  /* Ajuste fino para melhor posicionamento */
-  left: 40%;
+  top: 48px;
+  left: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transform: translateX(-50%);
-  z-index: 3;
-  /* Garante que o círculo fique na frente */
+  z-index: 1;
+  background-color: #ffffff;
 }
 
 .icon {
-  font-size: 35px;
+  position: absolute;
+  font-size: 40px;
   color: #D0BA8E;
 }
 
@@ -737,113 +724,31 @@ h6 {
 
 
 .info {
-  margin-top: -30% !important;
-  position: absolute;
-  left: 35px;
-  z-index: 4;
-  /* Garante que o texto fique sempre na frente */
-  padding: 5px;
+  width: 60%;
+  position: relative;
+  
 }
 
 .info p {
-  font-size: 90em;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Raleway;
-  margin-top: 30px;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  /* 150% */
+  padding: 1px;
+  text-align: center;
+  font-size: 14pt;
+  
 }
 
-.featured-services {
-  padding-top: 20px;
-  padding-bottom: 80px;
+.info h2 {
+  text-align: center;
+  font-size: 35pt;
+  
 }
 
-.featured-services h2 {
-  margin-top: 10px;
-  font-size: 50px;
-}
 
-.featured-services h3 {
-  margin-top: 10px;
-  font-size: 50px;
-}
-
-.featured-services h3::after {
-  content: "";
-  background: var(--accent-color);
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  left: 49%;
-  bottom: 10%;
-}
-
-.featured-services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all 0.3s ease-in-out;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.featured-services .service-item:before {
-  content: "";
-  position: absolute;
-  background: var(--accent-color);
-  inset: 100% 0 0 0;
-  transition: all 0.3s;
-  z-index: -1;
-}
-
-.featured-services .service-item .icon {
-  margin-bottom: 10px;
-}
-
-.featured-services .service-item .icon i {
-  /* color: var(--accent-color); */
-  font-size: 36px;
-  transition: ease-in-out 0.3s;
-}
-
-.featured-services .service-item h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.featured-services .service-item h4 a {
-  color: var(--heading-color);
-  transition: ease-in-out 0.3s;
-}
-
-.featured-services .service-item p {
-  line-height: 24px;
-  margin-bottom: 0;
-  transition: ease-in-out 0.3s;
-}
-
-.featured-services .service-item:hover h4 a,
-.featured-services .service-item:hover .icon i,
-.featured-services .service-item:hover p {
-  color: var(--contrast-color);
-}
-
-.featured-services .service-item:hover:before {
-  background: var(--accent-color);
-  inset: 0;
-  border-radius: 0px;
-}
 
 @media (max-width: 992px) {
   .container-numeros {
-    margin-bottom: 50px;
+    margin-bottom: 1px;
+    padding: 10px;
+
   }
 
   .info h2 {
@@ -853,7 +758,13 @@ h6 {
   .info p {
     font-size: 20px;
   }
-
+  .ellipse {
+    top: 3px;
+    width: 60px;
+    height: 60px;
+   
+  }
+  
 
 }
 
@@ -1564,46 +1475,58 @@ Section hero
     padding: 10px 20px;
   }
 
+  .bg-principal {
+    display: flex;
+    background-color: #5B3101; 
+    height: 90vh; 
+  }
+  
+
 }
 
 
 /*--------------------------------------------------------------
 # SObre o Leite/About Section
 --------------------------------------------------------------*/
-#teste {
+.video{
+  padding: 20px;
   display: flex;
   justify-content: center;
-  padding: 50px;
+  align-items: center;
+  padding: 15px;
   position: relative;
+  z-index: 2;
+  width: 100%;
 }
-
-.test {
-  display: flex;
-  justify-content: center;
-  position: relative; /* Define como referência para a imagem */
-  overflow: visible; /* Permite que a imagem ultrapasse */
-}
-
-.test-img {
+.circulo-video{
+  width: 420px;
+  height: 420px;
+  background-image: url('../img/cards/circulo.svg');
+  background-size: 160%; /* Ajusta o tamanho do SVG dentro do elemento */
+  background-repeat: no-repeat; /* Evita repetição */
+  background-position: center; /* Centraliza a imagem */
+  position: relative;
   display: flex;
   align-items: center;
-  position: absolute;
-  bottom: 20px; /* Move a imagem para fora da div */
-  left: 60%;
-  transform: translateX(-50%);
-  height: 100%;
-  width: 100%;
-  
- 
+  justify-content: center;
+  z-index: 1;
+
 }
 
-.test-img img {
-  height: 340px;
-  width: 420px;
- 
-  border-radius: 45% 55% 46% 54% / 51% 44% 56% 49%;
-  box-shadow: 10px 4px 10px 10px rgba(0, 0, 0, 0.10); /* Dá um destaque à imagem */
+.video-img{
+  position: absolute;
+  top: 72px ;
+  left: 33px;
+  display: flex;
+  align-items: center;
+  width: 86%;
+  
 }
+.video-img img{ 
+  border-radius: 42% 49% 42% 50% / 51% 44% 56% 49%;
+  box-shadow: 10px 4px 10px 15px rgba(0, 0, 0, 0.10); /* Dá um destaque à imagem */
+}
+  
 
 .about .content h3 {
   font-size: 1.75rem;
@@ -1639,29 +1562,16 @@ Section hero
 
 
 @media (max-width: 992px) {
-  .test {
-    padding: 10px;
-    border-radius: 45% 55% 46% 54% / 51% 44% 56% 49%;
-    width: 600px;
-    height: 295px;
-    background-color: #070707;
-    border: solid 35px #FFAE00;
-    position: relative; /* Define como referência para a imagem */
-    overflow: visible; /* Permite que a imagem ultrapasse */
-  }
+ 
   
-  .test-img {
+  .video-img{
     position: absolute;
-    bottom: -30px; /* Move a imagem para fora da div */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 318px;
-    height: 287px;
-  }
-  .test-img img{
-  
-    width: 315px;
-    height: 280px;
+    top: 98px ;
+    left: 26px;
+    display: flex;
+    align-items: center;
+    width: 88%;
+    
   }
 
   
@@ -1991,208 +1901,112 @@ Section hero
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonial-item{
+.swiper-wrapper{
+  display: flex;
+  align-items: center;
+  
+}
+
+#swiper-slide{
+  width: 410px;
+  height: 410px;
   background-image: url('../img/cards/circulo.svg');
-  background-size: 170% !important;
+  background-size: 165%; /* Ajusta o tamanho do SVG dentro do elemento */
+  background-repeat: no-repeat; /* Evita repetição */
+  background-position: center; /* Centraliza a imagem */
+  position: relative;
+  z-index: 1;
+  
+
 }
 
-.testimonials .testimonial-item {
-  height: 450px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* Centraliza verticalmente */
-  align-items: center;
-  /* Centraliza horizontalmente */
+
+
+.texto span{
+  width: 70%;
   text-align: center;
-  padding: 10px;
-  /* Reduzi para manter margem interna sem deslocar o conteúdo */
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  font-size: 25px;
-  color: var(--background-color);
-  position: relative;
-  z-index: 2;
-  padding: 30px;
-  max-width: 80%;
-  /* Garante que o texto não fique muito largo */
-}
-
-.texto {
-  display: flex;
-  flex-direction: column;
-  /* Organiza os itens verticalmente */
-  align-items: center;
-  /* Centraliza os elementos */
-  justify-content: center;
-  width: 80%;
-  /* Limita a largura do container */
-  text-align: center;
-  position: relative;
-  /* Permite posicionamento absoluto dentro do container */
-  padding: 20px;
-}
-
-.texto i {
-  font-size: 20px;
-  color: var(--accent-color);
-  /* Cor dos ícones */
   position: absolute;
+  top:40%;
+  left: 15%;
+  font-size: 16px;
+
+
+
 }
 
 .quote-icon-left {
-  top: 50px;
-  left: -1px;
-  /* Mantém dentro do card */
+  position: absolute;
+  top: 35%;
+  left: 15%;
 }
 
 .quote-icon-right {
-  bottom: 0;
-  right: 10px;
-  /* Mantém dentro do card */
-}
-
-.testimonials .testimonial-item::before {
-  content: "";
   position: absolute;
-  inset: 0;
+  top: 68%;
+  left: 80%;
 }
-
-.testimonials .testimonial-item span {
-  display: block;
-  text-align: center;
-  margin-top: 50px;
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--default-color);
-}
-
-.testimonials h3,
-.testimonials h4 {
-  text-align: center;
-  width: 100%;
-  /* Garante que ocupem toda a largura disponível */
-}
-
-.testimonials h3 {
-  font-size: 35px;
-}
-
-.testimonials h4 {
-  font-size: 25px;
-  font-weight: normal;
-  /* Deixa o subtítulo menos destacado */
-  color: var(--contrast-color);
-}
-
-.testimonials .perfil-depoimentos {
-  width: 50px;
-  height: 50px;
-  background-color: #db2121;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.perfil-nome{
   position: absolute;
-  top: 90%;
-  /* Coloca a imagem no meio do slide */
+  top: 86%;
+  left: 36%;
+}
+.perfil-nome h3{
+  margin-top: 60px;
+ 
+}
+
+.perfil-nome h4{
+font-size: 13pt; 
+}
+
+.perfil-img{
+  position: absolute;
+  top: 75%;
   left: 10%;
-  /* Ajusta a distância da borda esquerda */
-  transform: translateY(-50%);
-  /* Centraliza verticalmente */
-  z-index: 2;
-  /* Garante que fique à frente do conteúdo do slide */
 }
 
 
-.testimonials .perfil-depoimentos {
-  z-index: 3;
-  /* Garante que o perfil de usúario fique na frente */
-}
-
-.swiper-slide {
-  max-width: 420px;
-  /* Limita a largura do slide */
-  max-height: 420px;
-  /* Limita a altura do slide */
-  position: relative;
-  overflow: visible;
-  /* Garantir que o conteúdo não seja cortado */
-}
-
-.swiper-wrapper {
-  position: relative;
-  z-index: 1;
-  /* Garantir que o conteúdo do Swiper tenha a ordem correta */
-}
-
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 70px;
-  position: relative;
-  z-index: 3;
-  /* Garante que a navegação fique na frente */
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-houver-btn-color);
-  opacity: 1;
-  border: 1px solid var(--default-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-
-@media (max-width: 992px) {
-  .testimonials .testimonial-item {
-    width: 380px;
-    height: 350px;
-    margin-right: 60px;
+  
+ .swiper-slide {
+    max-width: 420px;
+    /* Limita a largura do slide */
+    max-height: 420px;
+    /* Limita a altura do slide */
     position: relative;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Centraliza verticalmente */
-    align-items: center;
-    /* Centraliza horizontalmente */
-    text-align: center;
-    padding: 10px;
-    /* Reduzi para manter margem interna sem deslocar o conteúdo */
+    overflow: visible;
+    /* Garantir que o conteúdo não seja cortado */
   }
-
-  .testimonials .perfil-depoimentos {
-    width: 70px;
-    height: 70px;
-    background-color: #db2121;
-    top: 70%;
-    /* Coloca a imagem no meio do slide */
-    left: 10%;
-    /* Ajusta a distância da borda esquerda */
-
+  
+  .swiper-wrapper {
+    position: relative;
+    z-index: 1;
+    /* Garantir que o conteúdo do Swiper tenha a ordem correta */
   }
-
-}
-
-
-
-
-
+  
+  
+  .testimonials .swiper-wrapper {
+    height: auto;
+  }
+  
+  .testimonials .swiper-pagination {
+    margin-top: 70px;
+    position: relative;
+    z-index: 3;
+    /* Garante que a navegação fique na frente */
+  }
+  
+  .testimonials .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--background-houver-btn-color);
+    opacity: 1;
+    border: 1px solid var(--default-color);
+  }
+  
+  .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--accent-color);
+  }
+  
 
 /*--------------------------------------------------------------
 # Faq Section
