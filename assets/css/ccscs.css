@@ -1,0 +1,26 @@
+.header .cta-btn,
+.header .cta-btn:focus {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  background: #baa67a;
+  color:#592b02;
+  font-weight: 700; 
+  font-size: 14px;
+  padding: 8px 40px;
+  margin: 0 5px 0 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.hero .btn-get-started {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  padding: 10px 80px;
+  background-color: #d0b687;
+  color: #654720;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
